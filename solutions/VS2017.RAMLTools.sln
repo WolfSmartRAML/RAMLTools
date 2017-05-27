@@ -1,10 +1,29 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.4
+VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Parser", "Parser", "{3AAF010C-4982-4D1B-8F7C-B654887FB0CA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Document", "Document", "{940356F9-9A2C-40A9-83B1-872571957428}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Raml.Document", "..\Raml.Document\Raml.Document.csproj", "{5FF6B729-5DEB-4D9D-A748-356DA507C5FC}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5FF6B729-5DEB-4D9D-A748-356DA507C5FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FF6B729-5DEB-4D9D-A748-356DA507C5FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FF6B729-5DEB-4D9D-A748-356DA507C5FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FF6B729-5DEB-4D9D-A748-356DA507C5FC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5FF6B729-5DEB-4D9D-A748-356DA507C5FC} = {940356F9-9A2C-40A9-83B1-872571957428}
 	EndGlobalSection
 EndGlobal
