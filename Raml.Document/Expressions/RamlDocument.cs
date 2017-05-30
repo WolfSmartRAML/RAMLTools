@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq.Expressions;
+using Newtonsoft.Json;
 
 namespace Raml.Parser.Expressions
 {
@@ -10,7 +11,7 @@ namespace Raml.Parser.Expressions
 
 		public RamlDocument()
 		{
-		    RamlVersion = RamlVersion.Version08;
+		    RamlVersion = RamlVersion.Version1; // AKS is this enum used?
 			Resources = new Collection<Resource>();
 			Documentation = new Collection<DocumentationItem>();
 			BaseUriParameters = new Dictionary<string, Parameter>();
@@ -33,6 +34,7 @@ namespace Raml.Parser.Expressions
 			this.dynamicRaml = dynamicRaml;
 		}
 
+        [JsonIgnore]
 		public IDictionary<string, object> RawContent { get { return dynamicRaml; } }
 
 		public string BaseUri { get; set; }

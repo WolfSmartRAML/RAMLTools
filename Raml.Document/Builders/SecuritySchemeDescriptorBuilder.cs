@@ -23,7 +23,9 @@ namespace Raml.Parser.Builders
                 var objects = dynamicRaml["responses"] as object[];
                 if (objects != null)
                 {
-                    var responsesNest = objects.ToList().Cast<ExpandoObject>();
+                    //var responsesNest = objects.ToList().Cast<ExpandoObject>();  AKSHERE why expando?
+                    var responsesNest = objects.ToList();
+
                     var responses = responsesNest.ToDictionary(
                         k => ((IDictionary<string, object>) k)["code"].ToString(), v => (object) v);
                     descriptor.Responses = new ResponsesBuilder(responses).GetAsDictionary(defaultMediaType);

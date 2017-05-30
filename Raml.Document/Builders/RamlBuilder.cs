@@ -37,6 +37,8 @@ namespace Raml.Parser.Builders
                                 filePath = (string)lib["value"];
 
                             var preffix = (string)lib["key"];
+
+		                    filePath = Path.ChangeExtension(filePath, "json");
 		                    var dynamic = await RamlParser.GetDynamicStructure(filePath);
                             
 		                    TypeBuilder.AddTypes(doc.Types, (IDictionary<string, object>) dynamic, preffix);
